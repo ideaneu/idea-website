@@ -112,17 +112,23 @@ get_header(); ?>
 
 
 <script type="text/javascript">
-    jQuery(document).ready(function($) {  
+  jQuery(document).ready(function($) {
+    $("#p__coaches").hide();
+    $("#p__management").hide();
+    $("#p__advisors").hide();
+    $("#p__faculty-staff").hide();
+  })
+    jQuery(window).load(function() {
+      var $ = jQuery;
+      var $container = $('.team__container');
 
-        var $container = $('.team__container');
-        
         $container.isotope({
             filter: '',
             layoutMode: 'masonry',
         });
 
         $('.filters').on( 'click', 'div.team__circle__button', function() {
-            
+
             var filterValue = jQuery(this).attr('data-filter');
             $container.isotope({ filter: filterValue });
             jQuery('.team__circle__container').find('.team__circle--active').removeClass('team__circle--active');
