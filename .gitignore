@@ -1,1 +1,7 @@
 wp-config.php
+/wp-content/upgrade
+/wp-content/uploads
+
+# Hidden files
+*.DS_Store
+*Thumbs.db

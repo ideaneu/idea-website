@@ -1,15 +1,3 @@
-# Custom Team member redirects
-redirect /idea/team/management/ /idea/team_type/management/
-redirect /idea/team/coaches/ /idea/team_type/coaches/
-redirect /idea/team/advisors/ /idea/team_type/advisors/
-redirect /idea/team/faculty-staff/ /idea/team_type/faculty-staff/
-# Redirects of the pages linked to by Google so it doesn't load a broken page.
-redirect /idea/about.php /idea/about-idea/
-redirect /idea/getinvolved.php /idea/get-involved/
-redirect /idea/about_management.php /idea/team_type/management/
-redirect /idea/getinvolved_venture.php /idea/get-involved/
-redirect /idea/portfolio.php /idea/ventures/
-redirect /idea/resources.php /idea/resources/
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -21,3 +9,14 @@ RewriteRule . /idea/index.php [L]
 </IfModule>
 
 # END WordPress
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  # Attempt to load files from production if
+  # they're not in our local version
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule wp-content/uploads/(.*) \
+    http://northeastern.edu/idea/wp-content/uploads/$1 [NC,L]
+</IfModule>
