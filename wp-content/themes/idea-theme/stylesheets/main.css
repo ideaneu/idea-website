@@ -33,92 +33,100 @@ INDEX:
 --------------------------------------------------------------*/
 
 .site-footer{
-  background-color: #144159;
-  position:relative;
+  background-color: #114058;
+  padding: 50px 0 5px;
+  font-family: 'HelveticaNeueLTStd-Bd';
+  font-weight: 800;
 }
 
-.site-footer .row{
-  margin: 4em 0 2em 0;
+.site-footer h2 {
+  font-weight: 800;
+  margin-bottom: 5px;
+  font-size: 26px;
 }
 
-.site-footer p{
+.site-footer h2 a {
+  font-family: 'HelveticaNeueLTStd-Bd';
+}
+
+.site-footer a.underlined {
+  text-decoration: underline;
+}
+
+.site-footer a, .site-footer a:link, .site-footer a:visited {
+  color: #fff;
+}
+
+.site-footer a:hover {
+  color: #6bb4e4;
+}
+
+.site-footer p.h2-margin {
+  margin-top: 31px;
+}
+
+.site-footer p {
+  font-size: 0.8rem;
+  line-height: 1rem;
   color: white;
+  font-weight: 800;
 }
 
-.site-footer p a {
-  color:white;
+.site-footer-bottom-row {
+  margin-top: 50px;
 }
 
-.site-footer p a:hover {
-  color:#DDD;
-  text-decoration:none;
-}
-
-.footer-nav{
-  padding: 10px;
-  margin-bottom:10px;
-}
-
-.site-footer .footer-nav ul{
-  list-style-type: none;
-  margin: 0px;
-}
-
-.site-footer .footer-nav ul li{
-  float: left;
-  margin-right: 10px;
-}
-
-.site-footer .footer-nav ul li a{
-  color: white;
-  font-size: 15px;
-  font-weight:bold;
-  font-family:'HelveticaNeueLTStd-Bd';
-  margin-right:15px;
-}
-
-.site-footer .footer-nav ul li a:hover{
-  color: #DDD;
-  text-decoration: none;
-}
 .footer-social-media{
   padding:0px;
   margin-bottom:40px;
   height:10px;
 }
 
-.footer-email {
-  margin-left:5px;
+.footer-social-media-seperator {
+  display: inline-block;
+  vertical-align: middle;
+  height: 18px;
+  width: 2px;
+  background: #fff;
+  margin: 0 3px;
 }
 
-.footer-neu-logo{
-  padding: 10px;
-}
-
-.footer-scoutBanner{
-  background-color: #F1F2F2;
-  width: 100%;
-  height: 40px;
-}
-
-.footer-scoutBanner p{
+.site-footer .footer-social-media-icon,
+.site-footer .footer-social-media-icon:visited,
+.site-footer .footer-social-media-icon:link {
+  display: inline-block;
+  vertical-align: middle;
   font-size: 16px;
-  color: #BCBEC0;
-  font-family: 'HelveticaNeueLTStd-Bd';
-  font-weight: 800;
-  float: right;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  padding-top: 3px;
+  border-radius: 12px;
+  background: #fff;
+  color: #114058;
+  text-align: center;
+}
+
+.site-footer .footer-social-media-icon:hover {
+  background: #6bb4e4;
+}
+
+.footer-scout p{
+  font-size: 16px;
+  text-align: right;
   padding: 12px 12px 0 0;
   margin: 0;
 }
 
-#footer-scoutBanner--logo{
-  color: #5FB0C2;
-  font-family: 'HelveticaNeueLTStd-Bd';
-  font-weight: 800;
+.footer-scout a:link, .footer-scout a:visited, .footer-scout a {
+  color: #6bb4e4;
 }
 
-.cta-button,
-.site-footer-button{
+.footer-scout a:hover {
+  color: #e97824;
+}
+
+.cta-button {
   background-color: #128cb5;
   box-shadow: none;
   color: white;
@@ -139,13 +147,6 @@ INDEX:
 button span {
   vertical-align: -webkit-baseline-middle;
   line-height: 0;
-}
-
-.site-footer input{
-  border-radius: 6px;
-  margin-bottom: 20px;
-  padding: 10px 16px;
-  width: 100%;
 }
 
 .modal{
@@ -514,4 +515,3 @@ input[type="button"], input[type="submit"], .btn {
 .error-404 .cat-item{
   font-family: 'HelveticaNeueLTStd-Lt';
 }
-
