@@ -44,7 +44,7 @@ function scout_base_setup() {
     register_nav_menus( array(
         'primary' => __( 'Primary Menu', 'scout-base' ),
     ) );
-    
+
     register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'test-menu' ),
 ) );
@@ -93,6 +93,19 @@ function scout_base_widgets_init() {
         'before_title'  => '<h1 class="widget-title">',
         'after_title'   => '</h1>',
     ) );
+
+
+    register_sidebar( array(
+        'name'          => __( 'Footer', 'scout-base' ),
+        'id'            => 'footer-1',
+        'description'   => '',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
+
+
 }
 add_action( 'widgets_init', 'scout_base_widgets_init' );
 
@@ -140,7 +153,7 @@ function scout_base_scripts() {
     wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/waypoints.min.js', array(), '');
     wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array(), '20140115');
     wp_enqueue_script( 'lettering', get_template_directory_uri() . '/js/jquery.lettering-0.6.1.min.js', array(), '20150908');
-    wp_enqueue_script( 'count-up', get_template_directory_uri() . '/js/jquery.counterup.min.js', array(), '20150908'); 
+    wp_enqueue_script( 'count-up', get_template_directory_uri() . '/js/jquery.counterup.min.js', array(), '20150908');
     }
 
     if ( is_post_type_archive('idea_team')) {
@@ -221,7 +234,7 @@ function scout_create_post_type() {
             'query_var' => true,
             'rewrite' => array( 'slug' => 'venture_status' )
               )
-           );        
+           );
 
 
             //------------------------------------------------------------------------
@@ -258,7 +271,7 @@ function scout_create_post_type() {
                     'query_var' => true,
                     'rewrite' => array( 'slug' => 'team_type' )
                       )
-                );    
+                );
 
                 register_post_type( 'idea_partners',
                         array(
@@ -291,15 +304,15 @@ function scout_create_post_type() {
                 );
 
 
-} // END scout_create_post_type() 
+} // END scout_create_post_type()
 
 
 
 
 if( function_exists('acf_add_options_page') ) {
-    
+
     acf_add_options_page();
-    
+
 }
 
 
@@ -340,5 +353,3 @@ function alter_the_query( $request ) {
     return $request;
 }
 add_filter( 'request', 'alter_the_query' );
-
-
