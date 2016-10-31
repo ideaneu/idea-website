@@ -25,35 +25,6 @@ add_action ( 'ninja_forms_display_css', 'contactForm_add_nf_styles' );
         <h1 class="title-banner">Question, comment, want to get involved? We’d love to hear from you.</h1>
       </div>
     </div>
-
-    <section id="contact-startVenture">
-      <h2 class="centered">Start a Venture</h2>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            <p>If you’re interested in getting started at IDEA with your concept, the first step is to attend New Venture Orientation.
-              At this session you will learn about the IDEA program, available resources, and next steps for developing your venture. </p>
-              <div class="text-center"><a href="http://www.tfaforms.com/365595" target="_blank"><button id="contact-startVenture__button" class="btn btn-lg"> Start a Venture</button></a></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <hr/>
-      <section id="contact-form">
-        <h2 class="centered">Contact Us</h2>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-              <?php setup_postdata($post); ?>
-              <?php the_content(); ?>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <hr/>
     <section id="contact-address">
       <div class="container">
         <div class="row">
@@ -82,6 +53,20 @@ add_action ( 'ninja_forms_display_css', 'contactForm_add_nf_styles' );
         </div>
       </div>
     </section>
+    <hr/>
+    <section id="contact-form">
+      <h2 class="centered">Contact Us</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <?php setup_postdata($post); ?>
+            <?php the_content(); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   </main><!-- #main -->
 </div><!-- #primary -->
 
