@@ -1,6 +1,9 @@
 wp-config.php
 /wp-content/upgrade
 /wp-content/uploads
+*node_modules/*
+wp-content/themes/idea-theme/node_modules/
+
 
 # Hidden files
 *.DS_Store
