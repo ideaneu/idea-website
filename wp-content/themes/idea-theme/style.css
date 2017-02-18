@@ -449,6 +449,18 @@ a:active {
 
 /* FIGURE OUT SIZE */
 @media (max-width: 767px) {
+  .nav.navbar-nav > li > a {
+    background: #eee; }
+  .nav.navbar-nav > li .dropdown-menu {
+    margin: 0;
+    padding: 0; }
+    .nav.navbar-nav > li .dropdown-menu li a {
+      padding: 10px 30px; }
+  .nav.navbar-nav li.open > a {
+    border-color: #E0E0E0; }
+  .nav.navbar-nav li > a {
+    display: block;
+    border-top: 2px solid #E0E0E0; }
   .sub-menu-intro-text {
     display: none; } }
 
@@ -460,17 +472,16 @@ a:active {
   color: #8F9193; }
   .navbar .nav a:link, .navbar .nav a:hover {
     color: #8F9193; }
-  .navbar .nav a, .navbar .nav a:hover, .navbar .nav a:focus {
-    background: none; }
   .navbar .nav a:hover {
     color: #E77924; }
 
-.navbar .nav .open a, .navbar .nav .open a:hover, .navbar .nav .open a:focus {
-  background: none; }
-
 @media (min-width: 768px) {
   .navbar {
-    border-bottom: 2px solid #8F9193; }
+    border-bottom: 1px solid #8F9193; }
+    .navbar .nav a, .navbar .nav a:hover, .navbar .nav a:focus {
+      background: none; }
+    .navbar .nav .open a, .navbar .nav .open a:hover, .navbar .nav .open a:focus {
+      background: none; }
     .navbar li.dropdown {
       position: static; }
     .navbar-nav > li > .dropdown-menu {
@@ -478,13 +489,13 @@ a:active {
       top: 100%;
       left: 0;
       right: 0;
-      margin-top: 2px;
+      margin-top: 1px;
       background: #fff;
       padding: 20px 10%;
       border-top: 0; }
       .navbar-nav > li > .dropdown-menu .sub-menu-links {
-        border-left: 2px solid #8F9193;
-        padding: 0 0 0 6%;
+        border-left: 1px solid #8F9193;
+        padding: 15px 0 15px 6%;
         margin: 0 0 0 6%;
         float: left; }
       .navbar-nav > li > .dropdown-menu li a {
@@ -497,9 +508,14 @@ a:active {
     .menu-main-navigation-container > ul > li a {
       padding: 20px 15px 10px; }
   .sub-menu-intro-text {
+    margin: 15px 0;
     float: left;
     width: 40%;
-    /*margin*/ } }
+    color: #8F9193; }
+    .sub-menu-intro-text p {
+      font-size: 16px;
+      line-height: 20px;
+      color: #8F9193; } }
 
 .navbar ul li a:hover {
   text-decoration: none;

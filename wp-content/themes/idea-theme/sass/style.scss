@@ -1,7 +1,7 @@
 $dark-grey: #8F9193;
 $orange: #E77924;
 
-$nav-border-width: 2px;
+$nav-border-width: 1px;
 $nav-height: 60px;
 
 /* Necessary for fixed navbar */
@@ -513,6 +513,32 @@ $bp-size-max: $bp-size - 1;
 
 
 @media (max-width: $bp-size-max) {
+  $nav-border-color: #E0E0E0;
+  .nav.navbar-nav {
+    > li {
+      > a {
+        background: #eee;
+      }
+      .dropdown-menu {
+        margin: 0;
+        padding: 0;
+        li a {
+          padding: 10px 30px;
+        }
+      }
+    }
+    li {
+      &.open {
+        > a {
+          border-color: $nav-border-color;
+        }
+      }
+      > a {
+        display: block;
+        border-top: 2px solid $nav-border-color;
+      }
+    }
+  }
   .sub-menu-intro-text {
     display: none;
   }
@@ -536,22 +562,27 @@ $nav-font-size: 1.1em;
     &:link, &:hover {
       color: $dark-grey;
     }
-    &, &:hover, &:focus {
-      background: none;
-    }
     &:hover {
       color: $orange;
-    }
-  }
-  .open {
-    a, a:hover, a:focus {
-      background: none;
     }
   }
 }
 
 @media (min-width: $bp-size) {
+  $top-bottom-padding: 15px;
   .navbar {
+    .nav {
+      a {
+        &, &:hover, &:focus {
+          background: none;
+        }
+      }
+      .open {
+        a, a:hover, a:focus {
+          background: none;
+        }
+      }
+    }
     border-bottom: $nav-border-width solid $dark-grey;
     li.dropdown {
       position: static;
@@ -567,7 +598,7 @@ $nav-font-size: 1.1em;
       border-top: 0;
       .sub-menu-links {
         border-left: $nav-border-width solid $dark-grey;
-        padding: 0 0 0 6%;
+        padding: $top-bottom-padding 0 $top-bottom-padding 6%;
         margin: 0 0 0 6%;
         float: left;
       }
@@ -591,9 +622,15 @@ $nav-font-size: 1.1em;
   }
 
   .sub-menu-intro-text {
+    margin: $top-bottom-padding 0;
     float: left;
     width: 40%;
-    /*margin*/
+    color: #8F9193;
+    p {
+      font-size: 16px;
+      line-height: 20px;
+      color: #8F9193;
+    }
   }
 }
 

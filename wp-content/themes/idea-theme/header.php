@@ -86,7 +86,7 @@ class CSS_Menu_Maker_Walker extends Walker {
   <div id="page" class="hfeed site">
     <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'scout-base' ); ?></a>
 
-    <nav class="navbar">
+    <nav class="navbar navbar-fixed-top">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
