@@ -4,7 +4,7 @@ class CSS_Menu_Maker_Walker extends Walker {
   var $db_fields = array( 'parent' => 'menu_item_parent', 'id' => 'db_id' );
 
   function start_lvl( &$output, $depth = 0, $args = array() ) {
-    $output .= '<ul class="dropdown-menu"><div class="sub-menu-intro-text"><h3>Resources</h3><p>Text here<p></div><div class="sub-menu-links">';
+    $output .= '<div class="sub-menu-links">';
   }
 
   function end_lvl( &$output, $depth = 0, $args = array() ) {
@@ -45,7 +45,9 @@ class CSS_Menu_Maker_Walker extends Walker {
     $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
     $item_output .= '</a>';
     $item_output .= $args->after;
-    // $item_output = '</li>';
+    if (!empty($children)) {
+      $item_output .= '<ul class="dropdown-menu"><div class="sub-menu-intro-text"><h3>' . $item->title . '</h3><p></p></div>';
+    }
 
     $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
   }
@@ -96,7 +98,7 @@ class CSS_Menu_Maker_Walker extends Walker {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <img class="nav-logo" src="<?php bloginfo('template_directory'); ?>/images/logos/IDEA_logo_full.png" width="200px" height="100px">
           </a>
         </div>
