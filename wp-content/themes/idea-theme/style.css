@@ -449,18 +449,22 @@ a:active {
 
 /* FIGURE OUT SIZE */
 @media (max-width: 767px) {
-  .nav.navbar-nav > li > a {
-    background: #eee; }
-  .nav.navbar-nav > li .dropdown-menu {
-    margin: 0;
-    padding: 0; }
-    .nav.navbar-nav > li .dropdown-menu li a {
-      padding: 10px 30px; }
-  .nav.navbar-nav li.open > a {
-    border-color: #E0E0E0; }
-  .nav.navbar-nav li > a {
-    display: block;
-    border-top: 2px solid #E0E0E0; }
+  .navbar-toggle {
+    margin: 15px 0 0 0; }
+  .nav.navbar-nav {
+    margin-top: 0; }
+    .nav.navbar-nav > li > a {
+      background: #eee; }
+    .nav.navbar-nav > li .dropdown-menu {
+      margin: 0;
+      padding: 0; }
+      .nav.navbar-nav > li .dropdown-menu li a {
+        padding: 10px 30px; }
+    .nav.navbar-nav li.open > a {
+      border-color: #E0E0E0; }
+    .nav.navbar-nav li > a {
+      display: block;
+      border-top: 1px solid #E0E0E0; }
   .sub-menu-intro-text {
     display: none; } }
 
@@ -468,7 +472,7 @@ a:active {
   background: #8F9193; }
 
 .navbar .nav a {
-  font-size: 1.1em;
+  font-size: 17px;
   color: #8F9193; }
   .navbar .nav a:link, .navbar .nav a:hover {
     color: #8F9193; }
@@ -495,11 +499,14 @@ a:active {
       border-top: 0; }
       .navbar-nav > li > .dropdown-menu .sub-menu-links {
         border-left: 1px solid #8F9193;
-        padding: 15px 0 15px 6%;
+        padding: 10px 0 10px 6%;
         margin: 0 0 0 6%;
         float: left; }
+        .navbar-nav > li > .dropdown-menu .sub-menu-links li a {
+          padding: 7px;
+          font-size: 17px; }
       .navbar-nav > li > .dropdown-menu li a {
-        font-size: 1.1em;
+        font-size: 17px;
         display: block;
         padding: 10px; }
   .menu-main-navigation-container > ul {
@@ -508,9 +515,9 @@ a:active {
     .menu-main-navigation-container > ul > li a {
       padding: 20px 15px 10px; }
   .sub-menu-intro-text {
-    margin: 15px 0;
+    margin: 10px 6% 10px 0;
     float: left;
-    width: 40%;
+    width: 54%;
     color: #8F9193; }
     .sub-menu-intro-text p {
       font-size: 16px;
