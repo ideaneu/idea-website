@@ -7,13 +7,13 @@ If you have PHP and a local server on your computer, you can run the website loc
 
 To install development requirements run:
 ```
-cd wp-content/themes/ideatheme/; npm install
+cd wp-content/themes/idea-theme/; npm install
 ```
 
 ## Developing
 Styles are partially plain CSS files and partially generated through SASS. To compile SASS files as you work, run:
 ```
-cd wp-content/themes/ideatheme/; gulp
+cd wp-content/themes/idea-theme/; gulp
 ```
 
 ## Contributing
